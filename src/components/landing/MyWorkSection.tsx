@@ -1,7 +1,11 @@
 import { ProjectCard } from '@/components/projects/ProjectCard';
 import { projects } from '@/config/Projects';
+import { Sparkles, Globe } from 'lucide-react';
 
 export default function MyWorkSection() {
+  const websites = projects.filter((p) => p.category !== 'ai');
+  const aiProjects = projects.filter((p) => p.category === 'ai');
+
   return (
     <section id="my-work" className="mt-16 md:mt-20">
       <div className="flex flex-col items-center justify-center mt-8">
@@ -9,9 +13,28 @@ export default function MyWorkSection() {
           My Work{"\n"}Projects
         </h2>
       </div>
-      <div className="mx-auto mt-8 w-full max-w-6xl">
+
+      {aiProjects.length > 0 && (
+        <div className="mx-auto mt-12 w-full max-w-6xl">
+          <div className="mb-4 flex items-center gap-2">
+            <Sparkles className="h-5 w-5 text-[#4ADE80]" />
+            <h3 className="text-xl font-semibold">AI Tools</h3>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {aiProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="mx-auto mt-12 w-full max-w-6xl">
+        <div className="mb-4 flex items-center gap-2">
+          <Globe className="h-5 w-5 text-blue-400" />
+          <h3 className="text-xl font-semibold">Websites</h3>
+        </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {projects.map((project) => (
+          {websites.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
         </div>

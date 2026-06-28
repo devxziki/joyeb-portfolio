@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 export interface Project {
   title: string;
   slug: string;
+  category?: 'website' | 'ai';
   description: string;
   fullDescription: string;
   features: string[];

@@ -243,6 +243,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Dev-Vortex',
+    category: 'ai',
     theme: 'neutral',
     slug: 'dev-vortex',
     description:
