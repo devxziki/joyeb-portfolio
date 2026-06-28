@@ -1,6 +1,6 @@
 import { ProjectCard } from '@/components/projects/ProjectCard';
 import { projects } from '@/config/Projects';
-import { Sparkles, Globe } from 'lucide-react';
+import { Brain, Monitor } from 'lucide-react';
 
 export default function MyWorkSection() {
   const websites = projects.filter((p) => p.category !== 'ai');
@@ -17,7 +17,7 @@ export default function MyWorkSection() {
       {aiProjects.length > 0 && (
         <div className="mx-auto mt-12 w-full max-w-6xl">
           <div className="mb-4 flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-[#4ADE80]" />
+            <Brain className="h-5 w-5 text-[#4ADE80]" />
             <h3 className="text-xl font-semibold">AI Tools</h3>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -30,7 +30,7 @@ export default function MyWorkSection() {
 
       <div className="mx-auto mt-12 w-full max-w-6xl">
         <div className="mb-4 flex items-center gap-2">
-          <Globe className="h-5 w-5 text-blue-400" />
+          <Monitor className="h-5 w-5 text-blue-400" />
           <h3 className="text-xl font-semibold">Websites</h3>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
