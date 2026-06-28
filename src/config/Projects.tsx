@@ -273,6 +273,36 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: 'Graphify',
+    theme: 'purple',
+    slug: 'graphify',
+    description:
+      'A code analysis CLI that extracts code structure and generates interactive knowledge graphs with community detection.',
+    fullDescription:
+      'Graphify scans source code repositories, extracts classes, functions, and imports using tree-sitter, builds a dependency graph, detects communities via the Louvain algorithm, and renders an interactive HTML visualization with vis.js. Supports JavaScript, TypeScript, Python, Java, C, and C++ with CLI commands for search, shortest path, and node explanation.',
+    features: [
+      'AST-based extraction using tree-sitter for 6 languages',
+      'Graph construction with import/usage edges between nodes',
+      'Louvain community detection with cohesion scoring',
+      'Interactive HTML visualization with vis.js (search, filter, community colors)',
+      'Natural language query engine with BFS/DFS traversal',
+      'CLI commands: build, query, path, explain, export',
+    ],
+    techStack: stackNodeTs,
+    challenges:
+      'Building a robust multi-language AST extractor without native dependencies, and making community detection work at scale in pure TypeScript.',
+    solutions:
+      'Used tree-sitter WASM packages for cross-platform extraction, graphlib for graph operations, and a custom port of the Louvain algorithm with cohesion scoring for meaningful cluster boundaries.',
+    image: '/project/graphify.png',
+    link: 'https://github.com/devxziki/graphify',
+    live: 'https://github.com/devxziki/graphify',
+    github: getGithubRepoUrl('graphify'),
+    technologies: [
+      { name: 'Node.js', icon: <NodeJs key="node" /> },
+      { name: 'TypeScript', icon: <TypeScript key="ts" /> },
+    ],
+  },
+  {
     title: 'Sankalp Restaurant',
     theme: 'green',
     slug: 'sankalp-restaurant',
