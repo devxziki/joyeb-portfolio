@@ -274,7 +274,8 @@ export const projects: Project[] = [
   },
   {
     title: 'Graphify',
-    theme: 'neutral',
+    category: 'tool',
+    theme: 'orange',
     slug: 'graphify',
     description:
       'A code analysis CLI that extracts code structure and generates interactive knowledge graphs with community detection.',
