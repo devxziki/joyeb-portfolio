@@ -274,7 +274,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Graphify',
-    theme: 'purple',
+    theme: 'neutral',
     slug: 'graphify',
     description:
       'A code analysis CLI that extracts code structure and generates interactive knowledge graphs with community detection.',
@@ -293,7 +293,7 @@ export const projects: Project[] = [
       'Building a robust multi-language AST extractor without native dependencies, and making community detection work at scale in pure TypeScript.',
     solutions:
       'Used tree-sitter WASM packages for cross-platform extraction, graphlib for graph operations, and a custom port of the Louvain algorithm with cohesion scoring for meaningful cluster boundaries.',
-    image: '/project/graphify.png',
+    image: '/project/graphify.svg',
     link: 'https://github.com/devxziki/graphify',
     live: 'https://github.com/devxziki/graphify',
     github: getGithubRepoUrl('graphify'),
