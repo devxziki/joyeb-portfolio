@@ -1,10 +1,12 @@
 import TypeScript from '@/components/technologies/TypeScript';
 import CSS from '@/components/technologies/CSS';
 import Vite from '@/components/technologies/Vite';
+import NodeJs from '@/components/technologies/NodeJs';
 import { getGithubRepoUrl } from '@/config/Github';
 import { Project } from '@/types/project';
 
 const stackViteTsCss = ['Vite', 'TypeScript', 'CSS'];
+const stackNodeTs = ['Node.js', 'TypeScript'];
 
 export const projects: Project[] = [
   {
@@ -237,6 +239,36 @@ export const projects: Project[] = [
       { name: 'Vite', icon: <Vite key="vite" /> },
       { name: 'TypeScript', icon: <TypeScript key="ts" /> },
       { name: 'CSS', icon: <CSS key="css" /> },
+    ],
+  },
+  {
+    title: 'Dev-Vortex',
+    theme: 'neutral',
+    slug: 'dev-vortex',
+    description:
+      'An AI context continuity CLI tool that scaffolds state management, handoff protocols, and session scripts into any project with one npx command.',
+    fullDescription:
+      'Dev-Vortex solves AI context loss across sessions, models, and tools. It generates a complete AI workspace layer inside your project with state files, handoff protocols, session scripts, and auto-detected rule files for OpenCode, Cursor, Claude Code, VS Code Copilot, and Antigravity. Built for hackathons and professional AI-assisted development.',
+    features: [
+      'One-command scaffold with npx dev-vortex init',
+      'Auto-detects project type, framework, and git context',
+      'Creates state files, handoff protocols, session scripts, and AI rule files',
+      'Works with OpenCode, Cursor, Claude Code, VS Code Copilot, Antigravity',
+      'All context contained in .vortex/ directory — clean project root',
+      'Available on npm — no global install needed',
+    ],
+    techStack: stackNodeTs,
+    challenges:
+      'Designing a file-based context system that works identically across every AI tool without any runtime dependencies or tool-specific configuration.',
+    solutions:
+      'Pure file-based architecture with standardized paths, template substitution for project-specific values, and auto-discovered rule files (AGENTS.md, .cursorrules, copilot-instructions.md) that each AI tool reads automatically.',
+    image: '/project/dev-vortex.png',
+    link: 'https://www.npmjs.com/package/dev-vortex',
+    live: 'https://www.npmjs.com/package/dev-vortex',
+    github: getGithubRepoUrl('dev-vortex'),
+    technologies: [
+      { name: 'Node.js', icon: <NodeJs key="node" /> },
+      { name: 'TypeScript', icon: <TypeScript key="ts" /> },
     ],
   },
   {

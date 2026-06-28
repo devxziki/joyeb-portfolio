@@ -40,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Vortex — AI context layer
+.vortex/
+.session-context.txt
+.context-export.md
+.context-transfer.md
+.model-switch-context.md
